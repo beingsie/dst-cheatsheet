@@ -1,0 +1,472 @@
+[
+    {
+        "CommandName": "Spawn prefab",
+        "Command": "c_spawn(\"prefab\",amount)",
+        "CommandDescription": "Improved DebugSpawn(\"prefab\"), spawns amount of selected \"prefab\" under the mouse cursor."
+    },
+    {
+        "CommandName": "Give Item",
+        "Command": "c_give(\"prefab\",amount)",
+        "CommandDescription": "Spawns amount of selected \"prefab\" in your inventory. Only works with Backpacks and Items that can be stored in the inventory."
+    },
+    {
+        "CommandName": "Go Adventuring",
+        "Command": "c_goadventuring()",
+        "CommandDescription": "Gives a set of starting items to the player."
+    },
+    {
+        "CommandName": "Scenario",
+        "Command": "c_doscenario(scenario)",
+        "CommandDescription": "Apply a scenario script to the selection and run it."
+    },
+    {
+        "CommandName": "Set",
+        "Command": "c_sethea\u200blth(percent)",
+        "CommandDescription": "Sets your health to a selected percentage. Note: Use fractional numbers 0.90 = 90%."
+    },
+    {
+        "CommandName": "Set Your Sanity",
+        "Command": "c_setsanit\u200by(percent)",
+        "CommandDescription": "Sets your sanity to a selected percentage. Note: Use fractional numbers 0.90 = 90%."
+    },
+    {
+        "CommandName": "Set",
+        "Command": "c_sethunger(pe\u200brcent)",
+        "CommandDescription": "Sets your hunger to a selected percentage. Note: Use fractional numbers 0.90 = 90%."
+    },
+    {
+        "CommandName": "Set Your Moisture",
+        "Command": "c_setmoisture(pe\u200brcent)",
+        "CommandDescription": "Sets your wetness to a selected percentage. Note: Use fractional numbers 0.90 = 90%."
+    },
+    {
+        "CommandName": "Temperature",
+        "Command": "c_settemperature(degrees)",
+        "CommandDescription": "Sets your temperature to a selected percentage. Note: Use fractional numbers 0.90 = 90%."
+    },
+    {
+        "CommandName": "God Mode",
+        "Command": "c_godmode()",
+        "CommandDescription": "It won't drain Sanity, Hunger or Health when attacked anymore. You cannot change your stats with commands while in godmode. If you are dead, revives you(Reviving via c_godmode() doesn't put you in godmode once revived)."
+    },
+    {
+        "CommandName": "Super",
+        "Command": "c_supergodmode()",
+        "CommandDescription": "Same as God Mode but also sets all your stats to full, even when turning it off. Similar to c_godmode(), it revives you as well(Reviving via c_supergodmode() doesn't put you in godmode once revived)."
+    },
+    {
+        "CommandName": "Maintain Your Health",
+        "Command": "c_maintainhealth(ThePlayer)",
+        "CommandDescription": "Similar to supergodmode, but constantly regenerates your health. To cancel, enter c_cancelmaintaintasks(ThePlayer)."
+    },
+    {
+        "CommandName": "Maintain Your Sanity",
+        "Command": "c_maintainsanity(ThePlayer)",
+        "CommandDescription": "Similar to supergodmode, but constantly regenerates your sanity. To cancel, enter c_cancelmaintaintasks(ThePlayer)."
+    },
+    {
+        "CommandName": "Maintain Your Hunger",
+        "Command": "c_maintainhunger(ThePlayer)",
+        "CommandDescription": "Similar to supergodmode, but constantly regenerates your hunger. To cancel, enter c_cancelmaintaintasks(ThePlayer)."
+    },
+    {
+        "CommandName": "Maintain Your Temperature",
+        "Command": "c_maintaintemperature(ThePlayer)",
+        "CommandDescription": "Similar to supergodmode, but constantly regenerates your temperature. To cancel, enter c_cancelmaintaintasks(ThePlayer)."
+    },
+    {
+        "CommandName": "Maintain Your Moisture",
+        "Command": "c_maintainmoisture(ThePlayer)",
+        "CommandDescription": "Similar to supergodmode, but constantly regenerates your moisture. To cancel, enter c_cancelmaintaintasks(ThePlayer)."
+    },
+    {
+        "CommandName": "Maintain All",
+        "Command": "c_maintainall(ThePlayer)",
+        "CommandDescription": "Similar to supergodmode, but constantly regenerates all stats. To cancel, enter c_cancelmaintaintasks(ThePlayer)."
+    },
+    {
+        "CommandName": "Mob Invisibility",
+        "Command": "c_makeinvisible()",
+        "CommandDescription": "Prevents mobs from targeting the player in combat. Does not work in all circumstances."
+    },
+    {
+        "CommandName": "Set Your Running Speed",
+        "Command": "c_speedmult(multiplier)",
+        "CommandDescription": "Standard bonus runspeed is 1. 2 makes you twice as fast and with 12 or more you can easily walk through walls and \"over\" water."
+    },
+    {
+        "CommandName": "Action Prediction",
+        "Command": "ThePlayer:EnableMovementPrediction(enable)",
+        "CommandDescription": "Enabled by default, setting it to \"false\" will exchange rubberbanding for choppiness, but is often helpful for combat. This only does anything if executed by a client, hosts do not have prediction."
+    },
+    {
+        "CommandName": "Creative Mode",
+        "Command": "c_freecrafting()",
+        "CommandDescription": "You can craft everything. Enter command again to disable creative mode."
+    },
+    {
+        "CommandName": "Maximum Health",
+        "Command": "ThePlayer.components.health:SetMaxHealth(value)",
+        "CommandDescription": "Change the Maximum Health of your character"
+    },
+    {
+        "CommandName": "Maximum Sanity",
+        "Command": "ThePlayer.components.sanity:SetMax(value)",
+        "CommandDescription": "Change the Maximum Sanity of your character"
+    },
+    {
+        "CommandName": "Maximum Hunger",
+        "Command": "ThePlayer.components.hunger:SetMax(value)",
+        "CommandDescription": "Change the Maximum Hunger of your character"
+    },
+    {
+        "CommandName": "Pause Hunger",
+        "Command": "ThePlayer.components.hunger:Pause(true)",
+        "CommandDescription": "Your character won't starve anymore."
+    },
+    {
+        "CommandName": "Change the",
+        "Command": "ThePlayer.components.combat.damagemultiplier=(value)",
+        "CommandDescription": "value)"
+    },
+    {
+        "CommandName": "Werebeaver Transformations",
+        "Command": "c_setbeaverness(percentage)",
+        "CommandDescription": "Turn Woodie into the Werebeaver. Set to 1 to transform to a Werebeaver. Set to 0 if you want to transform back to Woodie."
+    },
+    {
+        "CommandName": "List all players with username and player number.",
+        "Command": "c_listallplayers()",
+        "CommandDescription": "AllPlayers[1] will get ThePlayer if you are the host. Other players should have numbers as shown on the scoreboard (In certain situations, the number may be wrong. You can be more precise by using c_listallplayers() first to see the username and character for each player number.. Most of ThePlayer commands can be used with AllPlayers[number] instead of ThePlayer."
+    },
+    {
+        "CommandName": "Get a certain player",
+        "Command": "AllPlayers[number]",
+        "CommandDescription": "AllPlayers[1] will get ThePlayer if you are the host. Other players should have numbers as shown on the scoreboard (In certain situations, the number may be wrong. You can be more precise by using c_listallplayers() first to see the username and character for each player number.. Most of ThePlayer commands can be used with AllPlayers[number] instead of ThePlayer."
+    },
+    {
+        "CommandName": "Apply a command to all players",
+        "Command": "for k,v in pairs(AllPlayers) do command end",
+        "CommandDescription": "Replace command with another command, using \"v\" instead of AllPlayers[number]. For example, \"for k,v in pairs(AllPlayers) do c_move(v) end\" will move all players to the mouse position."
+    },
+    {
+        "CommandName": "Teleport another player to you",
+        "Command": "c_move(AllPlayers[number])",
+        "CommandDescription": "Moves the player to the cursor position."
+    },
+    {
+        "CommandName": "Kill a player",
+        "Command": "AllPlayers[number]:PushEvent('death')",
+        "CommandDescription": "Kills the player."
+    },
+    {
+        "CommandName": "Resurrect a player",
+        "Command": "AllPlayers[number]:PushEvent('respawnfromghost')",
+        "CommandDescription": "Resurrects the player."
+    },
+    {
+        "CommandName": "Give creative mode to a player",
+        "Command": "AllPlayers[number].components.builder:GiveAllRecipes()",
+        "CommandDescription": "Give the creative mode to the player."
+    },
+    {
+        "CommandName": "Teleport to a player",
+        "Command": "c_goto(AllPlayers[number])",
+        "CommandDescription": "Teleports you to the player corresponding to the player number from c_listallplayers()."
+    },
+    {
+        "CommandName": "Drop a player's inventory items",
+        "Command": "AllPlayers[number].components.inventory:DropEverything()",
+        "CommandDescription": "Drop everything from player's inventory corresponding to the player number from c_listallplayers()"
+    },
+    {
+        "CommandName": "Despawn a player's character (returns to selection screen for repicking)",
+        "Command": "c_despawn(AllPlayers[number])",
+        "CommandDescription": "This will delete their items, so it is recommended that you kill them first to drop their items, or let them DropEverything() as shown above."
+    },
+    {
+        "CommandName": "Teleport to Prefab",
+        "Command": "c_gonext(\"prefab\")",
+        "CommandDescription": "prefab"
+    },
+    {
+        "CommandName": "Delete Item Under Mouse",
+        "Command": "ConsoleWorldEntityUnderMouse():Remove()\nc_select():Remove()",
+        "CommandDescription": "After pressing enter, it deletes the item under your mouse. Use the second command on dedicated servers, the first command will not work."
+    },
+    {
+        "CommandName": "Delete All",
+        "Command": "for k,v in pairs(Ents) do if v.prefab == \"prefab\" then v:Remove() end end",
+        "CommandDescription": "prefab"
+    },
+    {
+        "CommandName": "Reveal Map - Self",
+        "Command": "minimap = TheSim:FindFirstEntityWithTag(\"mini\u00admap\")\nTheWorld.minimap.MiniMap:ShowArea (0,0,0,10000)",
+        "CommandDescription": "This is a local-only command and will not work if you are a client."
+    },
+    {
+        "CommandName": "Reveal Map - All Players",
+        "Command": "for k,v in pairs(AllPlayers) do for x=-1600,1600,35 do for y=-1600,1600,35 do v.player_classified.MapExplorer:RevealArea(x,0,y) end end end",
+        "CommandDescription": "This is a remote-only command and will not work if you are a client."
+    },
+    {
+        "CommandName": "Skip time units and update",
+        "Command": "LongUpdate(X)",
+        "CommandDescription": "Skips X time units and performs the \"LongUpdate\" function on world objects"
+    },
+    {
+        "CommandName": "Speed up simulation",
+        "Command": "c_speedup()",
+        "CommandDescription": "Speed up the simulation of world. some events are determined by time past in game, and hence can be triggered to happen earlier through this speed up. Skipping would not bring forward those events."
+    },
+    {
+        "CommandName": "Skip time",
+        "Command": "TheWorld.net.components.clock:OnUpdate(16*30*x)",
+        "CommandDescription": "Skips x days. Change x to skip more days or parts of days (e.g. 16*30*4.5 to skip 4.5 days)"
+    },
+    {
+        "CommandName": "Skip Day",
+        "Command": "c_skip(num)",
+        "CommandDescription": "Skips the current Day Cycle phase."
+    },
+    {
+        "CommandName": "Skip to the Next Day Cycle",
+        "Command": "\u200bTheWorld:PushEvent(\"ms_nextcycle\")",
+        "CommandDescription": "Skips the current Day Cycle phase."
+    },
+    {
+        "CommandName": "Skip phase",
+        "Command": "TheWorld:PushEvent(\"ms_nextphase\")",
+        "CommandDescription": "Skips the current Day Cycle phase."
+    },
+    {
+        "CommandName": "Set phase",
+        "Command": "\u200bTheWorld:PushEvent(\"ms_setphase\",PHASE NAME)",
+        "CommandDescription": "Changes to specific Day Cycle phase. Phase names can be \"day\", \"dusk\" or \"night\"."
+    },
+    {
+        "CommandName": "Set segments",
+        "Command": "TheWorld:PushEvent(\"ms_setclocksegs\", {day=x,dusk=y,night=z})",
+        "CommandDescription": "Sets amount of segments. Errors if x + y + z adds up to over 16. Note that this will get reset the next day."
+    },
+    {
+        "CommandName": "Skip to the Next Nightmare Cycle",
+        "Command": "\u200bTheWorld:PushEvent(\"ms_nextnightmarecycle\")",
+        "CommandDescription": "Skips the current Nightmare Cycle phase."
+    },
+    {
+        "CommandName": "Skip nightmare phase",
+        "Command": "TheWorld:PushEvent(\"ms_nextnightmarephase\")",
+        "CommandDescription": "Skips the current Nightmare Cycle phase."
+    },
+    {
+        "CommandName": "Set nightmare phase",
+        "Command": "\u200bTheWorld:PushEvent(\"ms_setnightmarephase\",PHASE NAME)",
+        "CommandDescription": "Changes to specific Nightmare Cycle phase. Phase names can be \"calm\", \"warn\", \"wild\" or \"dawn\"."
+    },
+    {
+        "CommandName": "Set nightmare segments",
+        "Command": "TheWorld:PushEvent(\"ms_setnightmaresegs\", {calm=A,warn=B,wild=C,dawn=D})",
+        "CommandDescription": "Sets amount of nightmare segments. A, B, C and D can be any number. This will not get reset at the next cycle."
+    },
+    {
+        "CommandName": "Lock nightmare phase",
+        "Command": "\u200bTheWorld:PushEvent(\"ms_locknightmarephase\",PHASE NAME)",
+        "CommandDescription": "Lock at specific Nightmare Cycle phase. Phase names can be \"calm\", \"warn\", \"wild\" or \"dawn\"."
+    },
+    {
+        "CommandName": "Stop locking nightmare phase",
+        "Command": "\u200bTheWorld:PushEvent(\"ms_locknightmarephase\")",
+        "CommandDescription": "Sets amount of segments. Errors if x + y + z adds up to over 16. Unlike setclocksegs, this is permanent."
+    },
+    {
+        "CommandName": "Set season segments",
+        "Command": "\u200bTheWorld:PushEvent(\"ms_setseasonclocksegs\", {summer={day=sx,dusk=sy,night=sz}, winter={day=wx,dusk=wy,night=wz}})",
+        "CommandDescription": "Sets amount of segments. Errors if x + y + z adds up to over 16. Unlike setclocksegs, this is permanent."
+    },
+    {
+        "CommandName": "Set season lengths",
+        "Command": "TheWorld:PushEvent(\"ms_setseasonlength\", {season=\"summer\", length=15})",
+        "CommandDescription": "Sets the lengths of the seasons."
+    },
+    {
+        "CommandName": "Start Summer",
+        "Command": "TheWorld:PushEvent(\"ms_setseason\", \"summer\")",
+        "CommandDescription": "Start summer"
+    },
+    {
+        "CommandName": "Start Winter",
+        "Command": "TheWorld:PushEvent(\"ms_setseason\", \"winter\")",
+        "CommandDescription": "Start winter"
+    },
+    {
+        "CommandName": "Start Rain",
+        "Command": "TheWorld:PushEvent(\"ms_forceprecipitation\")",
+        "CommandDescription": "Start rain."
+    },
+    {
+        "CommandName": "Stop Rain",
+        "Command": "TheWorld:PushEvent(\"ms_forceprecipitation\", false)",
+        "CommandDescription": "Stop rain. This also includes Frog Rain."
+    },
+    {
+        "CommandName": "Do Lightning Strike",
+        "Command": "TheWorld:PushEvent(\"ms_sendlightningstrike\", ConsoleWorldPosition())",
+        "CommandDescription": "Lightning strike on mouse cursor. Will hit lightning rod instead if there is one near"
+    },
+    {
+        "CommandName": "Meteor Strike",
+        "Command": "c_spawn(\"shadowmeteor\", 1)",
+        "CommandDescription": "Meteor strike on mouse cursor. Spawns different kind of rocks randomly."
+    },
+    {
+        "CommandName": "Activate all Events",
+        "Command": "for k, v in pairs(SPECIAL_EVENTS) do if v ~= SPECIAL_EVENTS.NONE then local tech = TECH[k] if tech ~= nil then tech.SCIENCE = 0 end end end function IsSpecialEventActive(event) return true end",
+        "CommandDescription": "Activates all Events on the same time. Doesnt work if in world gen the events section is set to Auto."
+    },
+    {
+        "CommandName": "Measure Distance",
+        "Command": "print(math.sqrt(ThePlayer:GetDistanceSqToInst(ConsoleWorldEntityUnderMouse())))",
+        "CommandDescription": "Prints the distance between player and object under mouse to the console log (displayed with Ctrl + L by default)."
+    },
+    {
+        "CommandName": "Kick/Ban a player",
+        "Command": "TheNet:Kick(userid)\nTheNet:Ban(userid)",
+        "CommandDescription": "Note that this can be accomplished more easily through the scoreboard. The userid can be obtained from the AllPlayers table. Once you've found the number of the player you want to kick (as shown above in the Other Player Commands section), you can use AllPlayers[#].userid."
+    },
+    {
+        "CommandName": "Temporarily Ban a player",
+        "Command": "TheNet:BanForTime(userid,time_in_seconds)",
+        "CommandDescription": "Player can be banned for a short period of time. userid stands for the KU id of the player to be banned. Once it is obtained it can be put in this format:"
+    },
+    {
+        "CommandName": "Connect to a server",
+        "Command": "c_connect(\"IP address\", port, \"password\")",
+        "CommandDescription": "If connecting conventionally doesn't work, it is possible to connect directly to an IP address. By default, the port is 10999. If there is no password, you can leave that part out: c_connect(\"10.0.0.8\", 10999)"
+    },
+    {
+        "CommandName": "Reload the world",
+        "Command": "c_reset()",
+        "CommandDescription": "Reloads the world without saving. This command may crash your game if you are a client (unless you send it as a remote command)."
+    },
+    {
+        "CommandName": "Regenerate the world",
+        "Command": "c_regenerateworld()",
+        "CommandDescription": "Regenerates specified items in a world."
+    },
+    {
+        "CommandName": "Regenerate a world shard",
+        "Command": "c_regenerateshard()",
+        "CommandDescription": "Regenerates specified items in a shard."
+    },
+    {
+        "CommandName": "Save the server",
+        "Command": "c_save()",
+        "CommandDescription": "Forces the server to save immediately (servers normally autosave whenever night finishes)."
+    },
+    {
+        "CommandName": "Shut down the server",
+        "Command": "c_shutdown( true / false)",
+        "CommandDescription": "true will save the game, false will exit without saving. c_shutdown() is the same as c_shutdown(true)."
+    },
+    {
+        "CommandName": "Roll back the server",
+        "Command": "c_rollback(count)",
+        "CommandDescription": "Rolls back a server by the given number of saves. c_rollback() will roll it back by one, while c_rollback(3) will roll it back three."
+    },
+    {
+        "CommandName": "Enable/Disable new player joining",
+        "Command": "TheNet:SetAllowIncomingConnections( true / false )",
+        "CommandDescription": "Setting it to true is the default behavior (people can join). Setting it to false prevents anyone from joining."
+    },
+    {
+        "CommandName": "Make a server announcement (for dedicated server console)",
+        "Command": "c_announce(\"announcement\")",
+        "CommandDescription": "This allows you to announce server shutdowns/restarts so players do not just get disconnected without warning."
+    },
+    {
+        "CommandName": "Drop a player's inventory items",
+        "Command": "AllPlayers[number].components.inventory:DropEverything()",
+        "CommandDescription": "Clears the morgue. Requires closing and reopening the game for changes to be seen."
+    },
+    {
+        "CommandName": "Move another player",
+        "Command": "c_move(AllPlayers[number])",
+        "CommandDescription": "Clears the morgue. Requires closing and reopening the game for changes to be seen."
+    },
+    {
+        "CommandName": "Despawn a player's character (returns to selection screen for repicking)",
+        "Command": "c_despawn(AllPlayers[number])",
+        "CommandDescription": "Clears the morgue. Requires closing and reopening the game for changes to be seen."
+    },
+    {
+        "CommandName": "Stop a vote",
+        "Command": "c_stopvote()",
+        "CommandDescription": "Clears the morgue. Requires closing and reopening the game for changes to be seen."
+    },
+    {
+        "CommandName": "Change something's length, width, and height",
+        "Command": "c_select().Transform:SetScale(x, y, z)",
+        "CommandDescription": "Clears the morgue. Requires closing and reopening the game for changes to be seen."
+    },
+    {
+        "CommandName": "Clear the morgue",
+        "Command": "ErasePersistentString(\"morgue\")",
+        "CommandDescription": "Clears the morgue. Requires closing and reopening the game for changes to be seen."
+    },
+    {
+        "CommandName": "Count the number of something in the entire world, and return the value to your character",
+        "Command": "ThePlayer.components.talker:Say(tostring(c_countprefabs(\"prefab\")))",
+        "CommandDescription": "Send the command using remote. This returns the total number of something in the entire world, and returns the value as though your character is talking."
+    },
+    {
+        "CommandName": "Count the number of something in the world",
+        "Command": "c_countprefabs(\"prefab\")",
+        "CommandDescription": "When sending the command using local, it returns the number of prefabs in your active area only. When sending the command using remote, it returns the number of prefabs in the world; the result is printed on the server console for dedicated server."
+    },
+    {
+        "CommandName": "Spawn Wormhole",
+        "Command": "function spawn_beef(tendency) local beef = c_spawn(\"beefalo\"); beef.components.hunger:DoDelta(400); beef.components.domesticatable:DeltaTendency(tendency, 1); beef:SetTendency(); beef.components.domesticatable.domestication = 1; beef.components.domesticatable:BecomeDomesticated(); end",
+        "CommandDescription": "To spawn a Beefalo with other tendencies, replace \"DEFAULT\" with any of the following: \"RIDER\", \"ORNERY\", \"PUDGY\""
+    },
+    {
+        "CommandName": "Spawn a Domesticated Beefalo",
+        "Command": "function spawn_beef(tendency) local beef = c_spawn(\"beefalo\"); beef.components.hunger:DoDelta(400); beef.components.domesticatable:DeltaTendency(tendency, 1); beef:SetTendency(); beef.components.domesticatable.domestication = 1; beef.components.domesticatable:BecomeDomesticated(); end",
+        "CommandDescription": "To spawn a Beefalo with other tendencies, replace \"DEFAULT\" with any of the following: \"RIDER\", \"ORNERY\", \"PUDGY\""
+    },
+    {
+        "CommandName": "Teleport Items to the player",
+        "Command": "c_find(\"flower\").Transform:SetPosition(AllPlayers[1]:GetPosition():Get())",
+        "CommandDescription": "Picking up a player does cause the game to crash for the player being picked up"
+    },
+    {
+        "CommandName": "Alter player size",
+        "Command": "ThePlayer.Transform:SetScale(number,number,number)",
+        "CommandDescription": "Picking up a player does cause the game to crash for the player being picked up"
+    },
+    {
+        "CommandName": "Alter size of prefab under mouse",
+        "Command": "c_select().Transform:SetScale(number,number,number)",
+        "CommandDescription": "Picking up a player does cause the game to crash for the player being picked up"
+    },
+    {
+        "CommandName": "Alter player color/transparency",
+        "Command": "ThePlayer.AnimState:SetMultColour(number,number,number,number)",
+        "CommandDescription": "Picking up a player does cause the game to crash for the player being picked up"
+    },
+    {
+        "CommandName": "Alter color/transparency of prefab under mouse",
+        "Command": "c_select().AnimState:SetMultColour(number,number,number,number)",
+        "CommandDescription": "Picking up a player does cause the game to crash for the player being picked up"
+    },
+    {
+        "CommandName": "Makes prefab under mouse pick-up-able",
+        "Command": "c_select():AddComponent(\"inventoryitem\")",
+        "CommandDescription": "Picking up a player does cause the game to crash for the player being picked up"
+    },
+    {
+        "CommandName": "Change a character's body, face, hand and other",
+        "Command": "for k,v in pairs(Ents) do if v.AnimState and v.AnimState:GetBuild() == \"character'sname\" then v.AnimState:OverrideSymbol(\"bodypart\", \"enothercharacter'sname\",\"bodypart\") end end",
+        "CommandDescription": "Where \"character'sname\", write the name of the character whose body part you want to change. For instance: \"webber\", \"wilson\", \"wx78\" (if you need Maxwell, then use \"waxwell\", and for Wigfrid \"wathgrithr\")"
+    }
+]

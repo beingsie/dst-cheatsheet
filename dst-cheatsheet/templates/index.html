@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<!-- Content starts here -->
+<ul class="list-disc list-inside mx-4">
+    {% for command in data %}
+    <li class="my-4">
+        <strong class="text-lg font-semibold">{{ command.CommandName }}</strong><br>
+        <code class="bg-gray-200 p-2 rounded-md">{{ command.Command }}</code><br>
+        {{ command.CommandDescription }}
+        <div class="copyable-div bg-white p-4 my-4" data-clipboard-target="#div{{ loop.index }}">
+            <div id="div{{ loop.index }}" class="copy-content">
+                {{ command.Command }}
+            </div>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-md" onclick="copyText('#div{{ loop.index }}')">Copy
+                Text</button>
+        </div>
+    </li>
+    {% endfor %}
+</ul>
+
+<div
+    class="copy-popup hidden bg-green-500 text-white px-4 py-2 rounded-md fixed top-4 left-1/2 transform -translate-x-1/2">
+    Copied successfully!
+</div>
+
+{% endblock %}
