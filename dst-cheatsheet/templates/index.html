@@ -4,26 +4,35 @@
 
 {% block content %}
 <!-- Content starts here -->
-<ul class="list-disc list-inside mx-4">
-    {% for command in data %}
-    <li class="my-4">
-        <strong class="text-lg font-semibold">{{ command.CommandName }}</strong><br>
-        <code class="bg-gray-200 p-2 rounded-md">{{ command.Command }}</code><br>
-        {{ command.CommandDescription }}
-        <div class="copyable-div bg-white p-4 my-4" data-clipboard-target="#div{{ loop.index }}">
-            <div id="div{{ loop.index }}" class="copy-content">
-                {{ command.Command }}
+<div class="bg-black p-4">
+    <ul class="list-none list-inside grid grid-cols-2 grid-rows-3 gap-4">
+        {% for command in data %}
+        <li class="flex flex-col gap-2 bg-slate-100 p-6 rounded-3xl">
+            <strong class="text-xl font-semibold">{{ command.CommandName }}</strong>
+            <div class="flex flex-row items-center gap-2">
+                <code class="bg-gray-800 text-white p-2 rounded-md overflow-x-auto">{{ command.Command }}</code>
+                <div class="copyable-div bg-white" data-clipboard-target="#div{{ loop.index }}">
+                    <!-- Hide content -->
+                    <div id="div{{ loop.index }}" class="hidden copy-content">
+                        {{ command.Command }}
+                    </div>
+                    <!-- End -->
+                    <button class="bg-blue-500 hover:bg-blue-400 active:bg-blue-600 text-white px-4 py-2 rounded-md"
+                        onclick="copyText('#div{{ loop.index }}')">
+                        <i class="fa-solid fa-copy"></i>
+                    </button>
+                </div>
             </div>
-            <button class="bg-blue-500 text-white px-4 py-2 rounded-md" onclick="copyText('#div{{ loop.index }}')">Copy
-                Text</button>
-        </div>
-    </li>
-    {% endfor %}
-</ul>
-
-<div
-    class="copy-popup hidden bg-green-500 text-white px-4 py-2 rounded-md fixed top-4 left-1/2 transform -translate-x-1/2">
-    Copied successfully!
+            <p class="text-gray-500">{{ command.CommandDescription }}</p>
+        </li>
+        {% endfor %}
+    </ul>
 </div>
 
+<div class="animate-bounce copy-popup hidden bg-green-500 text-white px-6 py-4 rounded-full fixed bottom-4 right-4">
+    <div class="flex flex-row items-center gap-2">
+        <p>Copied Successfully!</p>
+        <i class="fa-solid fa-clipboard-check"></i>
+    </div>
+</div>
 {% endblock %}

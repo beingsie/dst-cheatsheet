@@ -20,7 +20,7 @@
         "CommandDescription": "Apply a scenario script to the selection and run it."
     },
     {
-        "CommandName": "Set",
+        "CommandName": "Set Health",
         "Command": "c_sethea\u200blth(percent)",
         "CommandDescription": "Sets your health to a selected percentage. Note: Use fractional numbers 0.90 = 90%."
     },
@@ -30,7 +30,7 @@
         "CommandDescription": "Sets your sanity to a selected percentage. Note: Use fractional numbers 0.90 = 90%."
     },
     {
-        "CommandName": "Set",
+        "CommandName": "Set Hunger",
         "Command": "c_sethunger(pe\u200brcent)",
         "CommandDescription": "Sets your hunger to a selected percentage. Note: Use fractional numbers 0.90 = 90%."
     },
